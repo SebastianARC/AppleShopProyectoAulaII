@@ -4,6 +4,8 @@
  */
 package Ventanas;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author User
@@ -13,6 +15,8 @@ public class Sistema extends javax.swing.JFrame {
     public Login lg;
     public Sistema() {
         initComponents();
+        setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("../Img/apple-logo-png-black.png")).getImage());
     }
 
     /**
@@ -38,6 +42,8 @@ public class Sistema extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
