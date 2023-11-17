@@ -5,13 +5,20 @@
 package Ventanas;
 
 import javax.swing.ImageIcon;
+import vista.Airpods;
+import vista.Ipad;
+import vista.Iphone15;
+import vista.Reloj;
 
 /**
  *
  * @author User
  */
 public class Sistema extends javax.swing.JFrame {
-
+    public Airpods ar;
+    public Ipad ip;
+    public Iphone15 iph;
+    public Reloj re;
     public Login lg;
     public Sistema() {
         initComponents();
@@ -58,11 +65,21 @@ public class Sistema extends javax.swing.JFrame {
         btnIphone.setBorderPainted(false);
         btnIphone.setContentAreaFilled(false);
         btnIphone.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIphone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIphoneActionPerformed(evt);
+            }
+        });
 
         miniPadButton.setBackground(new java.awt.Color(0, 0, 0));
         miniPadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/WhatsApp Image 2023-11-16 at 2.41.05 PM (1).jpeg"))); // NOI18N
         miniPadButton.setContentAreaFilled(false);
         miniPadButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        miniPadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miniPadButtonActionPerformed(evt);
+            }
+        });
 
         AppleWatchButton.setBackground(new java.awt.Color(0, 0, 0));
         AppleWatchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Apple_Watch_Series_9-removebg-preview (1) (2).png"))); // NOI18N
@@ -72,11 +89,21 @@ public class Sistema extends javax.swing.JFrame {
         AppleWatchButton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         AppleWatchButton.setMaximumSize(new java.awt.Dimension(120, 120));
         AppleWatchButton.setMinimumSize(new java.awt.Dimension(120, 120));
+        AppleWatchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AppleWatchButtonActionPerformed(evt);
+            }
+        });
 
         AirpodsButton.setBackground(new java.awt.Color(0, 0, 0));
         AirpodsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/WhatsApp Image 2023-11-16 at 2.41.05 PM.jpeg"))); // NOI18N
         AirpodsButton.setContentAreaFilled(false);
         AirpodsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AirpodsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AirpodsButtonActionPerformed(evt);
+            }
+        });
 
         lblIphone1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 18)); // NOI18N
         lblIphone1.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,6 +124,7 @@ public class Sistema extends javax.swing.JFrame {
         btnLogout.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         btnLogout.setForeground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("Log Out");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogoutActionPerformed(evt);
@@ -187,6 +215,30 @@ public class Sistema extends javax.swing.JFrame {
         lg.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnIphoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIphoneActionPerformed
+        iph = new Iphone15();
+        iph.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnIphoneActionPerformed
+
+    private void AirpodsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AirpodsButtonActionPerformed
+        ar = new Airpods();
+        ar.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_AirpodsButtonActionPerformed
+
+    private void miniPadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miniPadButtonActionPerformed
+        ip = new Ipad();
+        ip.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_miniPadButtonActionPerformed
+
+    private void AppleWatchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppleWatchButtonActionPerformed
+        re = new Reloj();
+        re.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_AppleWatchButtonActionPerformed
 
     /**
      * @param args the command line arguments
